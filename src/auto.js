@@ -29,6 +29,9 @@ class auto {
         else if(this.direccion === "O"){
             this.direccion = "N";
         }
+        else{
+            return false;
+        }
     }
     GirarIzquierda(){
         if(this.direccion === "N"){
