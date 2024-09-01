@@ -1,7 +1,7 @@
 class auto {
     constructor(posX, posY, direccion){
-        this.posX=posX;
-        this.posY=posY;
+        this.posX=posX;             //fila
+        this.posY=posY;             //columnas
         this.direccion = direccion;
     }
     ApuntarNorte(){
@@ -54,6 +54,10 @@ class auto {
         if(this.direccion === "N")
         {
             this.posY++;
+            return this.posX + "," + this.posY + this.direccion;
+        }
+        else if(this.direccion === "E"){
+            this.posX++;
             return this.posX + "," + this.posY + this.direccion;
         }
         else {
