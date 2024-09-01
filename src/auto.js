@@ -13,5 +13,8 @@ class auto {
     ApuntarEste(){
         this.direccion = "E";
     }
+    ApuntarOeste(){
+        this.direccion = "O";
+    }
 }
 export default auto;

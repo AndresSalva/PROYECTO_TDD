@@ -14,9 +14,9 @@ describe("Verificar clase auto", () => {
       autito.ApuntarSur();
       expect(autito.direccion).toEqual("S");
     });
-    it("El autito deberia apuntar Este", () => {
+    it("El autito deberia apuntar Oeste", () => {
       const autito = new auto();
-      autito.ApuntarEste();
-      expect(autito.direccion).toEqual("E");
+      autito.ApuntarOeste();
+      expect(autito.direccion).toEqual("O");
     });
   });
