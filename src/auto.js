@@ -40,6 +40,9 @@ class auto {
         else if(this.direccion === "E"){
             this.direccion = "N";
         }
+        else if(this.direccion === "O"){
+            this.direccion = "S";
+        }
     }
 }
 export default auto;
