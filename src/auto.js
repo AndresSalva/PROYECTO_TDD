@@ -30,5 +30,10 @@ class auto {
             this.direccion = "N";
         }
     }
+    GirarIzquierda(){
+        if(this.direccion === "N"){
+            this.direccion = "O";
+        }
+    }
 }
 export default auto;
