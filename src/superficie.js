@@ -10,7 +10,11 @@ class Superficie {
 
     validarSuperficie()
     {
-      return true;
+      if(this.filas >= 0)
+        {
+            return true;
+      }
+      return false;
     }
   }
 

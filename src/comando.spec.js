@@ -16,5 +16,9 @@ describe("Superficie", () => {
     const result = new Superficie(3, 3)
     expect(result.validarSuperficie()).toEqual(true);
   });
+  it("Deberia verificar si la fila NO es mayor 0", () => {
+    const result = new Superficie(-1, 3)
+    expect(result.validarSuperficie()).toEqual(false);
+  });
 
 });
