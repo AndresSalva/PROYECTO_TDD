@@ -50,6 +50,9 @@ class auto {
             return false;
         }
     }
+    Avanzar(){
+        return this.posX + "," + (this.posY + 1) + this.direccion;
+    }
 
 }
 export default auto;
