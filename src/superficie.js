@@ -10,11 +10,12 @@ class Superficie {
 
     validarSuperficie()
     {
+      let verificador = false;
       if(this.filas >= 0 && this.columnas >= 0)
         {
-            return true;
+            verificador = true;
       }
-      return false;
+      return verificador;
     }
   }
 

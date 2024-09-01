@@ -24,5 +24,9 @@ describe("Superficie", () => {
     const result = new Superficie(3, -1)
     expect(result.validarSuperficie()).toEqual(false);
   });
+  it("Deberia verificar si la columna es mayor 0", () => {
+    const result = new Superficie(3, 3)
+    expect(result.validarSuperficie()).toEqual(true);
+  });
 
 });
