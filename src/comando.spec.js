@@ -8,8 +8,13 @@ describe("Linea de comandos del auto", () => {
   });
 });
 describe("Superficie", () => {
-    it("Deberia mostrar el area de la superfice", () => {
-      const result = new Superficie(3, 3)
-      expect(result.mostrarSuperficie()).toEqual([3, 3]);
-    });
+  it("Deberia mostrar el area de la superfice", () => {
+    const result = new Superficie(3, 3)
+    expect(result.mostrarSuperficie()).toEqual([3, 3]);
   });
+  it("Deberia verificar si la fila es mayor 0", () => {
+    const result = new Superficie(3, 3)
+    expect(result.validarSuperficie()).toEqual(true);
+  });
+
+});
