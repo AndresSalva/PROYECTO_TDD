@@ -7,6 +7,9 @@ class auto {
     ApuntarNorte(){
         this.direccion = "N";
     }
+    ApuntarSur(){
+        this.direccion = "S";
+    }
     
 }
 export default auto;
