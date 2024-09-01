@@ -16,5 +16,10 @@ class auto {
     ApuntarOeste(){
         this.direccion = "O";
     }
+    GirarDerecha(){
+        if(this.direccion === "N"){
+            this.direccion = "E";
+        }
+    }
 }
 export default auto;
