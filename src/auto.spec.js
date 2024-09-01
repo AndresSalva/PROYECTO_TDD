@@ -37,5 +37,10 @@ describe("Verificar clase auto", () => {
       autito.GirarDerecha();
       expect(autito.direccion).toEqual("S");
     });
-    
+    it("El autito apuntando al oeste, si gira a la derecha, deberia apuntar al norte", () => {
+      const autito = new auto();
+      autito.ApuntarOeste();
+      autito.GirarDerecha();
+      expect(autito.direccion).toEqual("N");
+    });
   });
