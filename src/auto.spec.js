@@ -91,4 +91,8 @@ describe("Verificar clase auto", () => {
       const autito = new auto(1,2,"S");
       expect(autito.Avanzar()).toEqual("1,1S");
     });
+    it("Si el autito avanza al oeste entonces deberia bajar una posicion en x", () => {
+      const autito = new auto(2,2,"O");
+      expect(autito.Avanzar()).toEqual("1,2O");
+    });
   });
