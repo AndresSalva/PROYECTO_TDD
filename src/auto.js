@@ -46,11 +46,10 @@ class auto {
         else if(this.direccion === "O"){
             this.direccion = "S";
         }
+        else{
+            return false;
+        }
     }
-
-    // Avanzar(){
-    //     return this.posX + "," + (this.posY + 1) + this.direccion;
-    // }
 
 }
 export default auto;

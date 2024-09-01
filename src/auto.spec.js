@@ -67,8 +67,12 @@ describe("Verificar clase auto", () => {
       autito.GirarIzquierda();
       expect(autito.direccion).toEqual("E");
     });
-    it("El autito no gira a una coordenada correcta, deberia retornar falso ", () => {
+    it("La funcion en girar derecha solo acepta N/S/E/O, Si no deberia retornar falso", () => {
       const autito = new auto(1,2,"d");
       expect(autito.GirarDerecha()).toEqual(false);
+    });
+    it("La funcion en girar izquierda solo acepta N/S/E/O, Si no deberia retornar falso", () => {
+      const autito = new auto(1,2,"p");
+      expect(autito.GirarIzquierda()).toEqual(false);
     });
   });
