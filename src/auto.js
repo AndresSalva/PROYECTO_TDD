@@ -44,5 +44,10 @@ class auto {
             this.direccion = "S";
         }
     }
+
+    // Avanzar(){
+    //     return this.posX + "," + (this.posY + 1) + this.direccion;
+    // }
+
 }
 export default auto;
