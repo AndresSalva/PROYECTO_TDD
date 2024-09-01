@@ -4,7 +4,9 @@ class auto {
         this.posY=posY;
         this.direccion = direccion;
     }
-
+    ApuntarNorte(){
+        this.direccion = "N";
+    }
     
 }
 export default auto;
