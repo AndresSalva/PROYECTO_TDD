@@ -10,7 +10,7 @@ class Superficie {
 
     validarSuperficie()
     {
-      if(this.filas >= 0)
+      if(this.filas >= 0 && this.columnas >= 0)
         {
             return true;
       }
