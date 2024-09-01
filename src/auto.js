@@ -10,6 +10,8 @@ class auto {
     ApuntarSur(){
         this.direccion = "S";
     }
-    
+    ApuntarEste(){
+        this.direccion = "E";
+    }
 }
 export default auto;
