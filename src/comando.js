@@ -18,4 +18,8 @@ function desglosarPosicionInicial(posicionInicial){
   const desglosado = [x, y].concat(direccion);
   return desglosado;
 }
-export {mostrarComando,procesarComando,desglosarDimension,desglosarPosicionInicial};
+function desglosarMovimiento(comandosMovimiento){
+  const movimientos = comandosMovimiento.split('');
+  return movimientos;
+}
+export {mostrarComando,procesarComando,desglosarDimension,desglosarPosicionInicial,desglosarMovimiento};
