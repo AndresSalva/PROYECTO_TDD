@@ -28,6 +28,10 @@ function ejecutar(comando){
   const partes = procesarComando(comando);
   const dimension = desglosarDimension(partes[0]);
   const posicionInicial = desglosarPosicionInicial(partes[1]);
+  const validacionPosicion = validarPosicionInicial(posicionInicial);
+  if (validacionPosicion !== true) {
+    return validacionPosicion; 
+  }
   const movimientos = desglosarMovimiento(partes[2]);
   const superficie = new Superficie(dimension[0],dimension[1]);
   const autito = new auto(posicionInicial[0],posicionInicial[1],posicionInicial[2]);

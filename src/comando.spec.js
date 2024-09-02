@@ -33,5 +33,12 @@ describe("Linea de comandos del auto", () => {
     const posicionInicial = [-1, 3];
     expect(validarPosicionInicial(posicionInicial)).toEqual("Error de comando");
   });
-  
+  it("Debería devolver true si en la posicion x NO es negativo", () => {
+    const posicionInicial = [1, 3];
+    expect(validarPosicionInicial(posicionInicial)).toEqual(true);
+  });
+  it("Debería procesar la funcion ejecutar y devolver error si x o y empieza en -1", () => {
+    const result = ejecutar("5,5/-1,3N/IADA")
+    expect(result).toEqual("Error de comando");
+  });
 });
