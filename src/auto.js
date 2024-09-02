@@ -84,5 +84,12 @@ class auto {
             this.GirarIzquierda();
         }
     }
+    validarMovomientos(movimiento){
+        if (movimiento !== "A" && movimiento !== "I" && movimiento !== "D") {
+            return "El movimiento no es valido";
+        }
+        this.Avanza_o_Gira(movimiento);
+        return true;
+    }
 }
 export default auto;
