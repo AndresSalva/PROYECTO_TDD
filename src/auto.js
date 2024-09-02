@@ -70,5 +70,19 @@ class auto {
         let resultado = this.posX + "," + this.posY + this.direccion;
         return resultado;
     }
+    mostrarPosicion(){
+        return this.posX +","+ this.posY + this.direccion;
+    }
+    Avanza_o_Gira(movimiento){
+        if(movimiento === "A"){
+            this.Avanzar();
+        }
+        else if(movimiento === "D"){
+            this.GirarDerecha();
+        }
+        else{
+            this.GirarIzquierda();
+        }
+    }
 }
 export default auto;
