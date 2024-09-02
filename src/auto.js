@@ -71,7 +71,7 @@ class auto {
         return resultado;
     }
     limitesPosicionInicial(){
-        if(this.posX < 0 ){
+        if(this.posX < 0 || this.posY < 0 ){
             return "Posicion fuera de limites" 
         }
         return true;
