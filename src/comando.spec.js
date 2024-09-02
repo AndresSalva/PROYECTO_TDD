@@ -1,4 +1,4 @@
-import {mostrarComando, procesarComando,desglosarDimension} from "./comando.js";
+import {mostrarComando, procesarComando,desglosarDimension,desglosarPosicionInicial} from "./comando.js";
 
 describe("Linea de comandos del auto", () => {
   it("Deberia mostrar el comando ingresado por el usuario", () => {
@@ -14,6 +14,11 @@ describe("Linea de comandos del auto", () => {
     const result = procesarComando("5,5/1,2N/IAIAIAIAA")
     const desglose = desglosarDimension(result[0]);
     expect(desglose).toEqual([5,5]);
+  });
+  it("Debería procesar el comando ingresado y desglosar la posicion inicial", () => {
+    const result = procesarComando("5,5/1,2N/IAIAIAIAA")
+    const desglose = desglosarPosicionInicial(result[1]);
+    expect(desglose).toEqual([1,2,"N"]);
   });
   
 });

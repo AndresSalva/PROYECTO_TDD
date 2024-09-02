@@ -12,4 +12,10 @@ function desglosarDimension(dimensionesSuperficie){
   const [filas, columnas] = dimensionesSuperficie.split(',').map(Number);
   return [filas, columnas];
 }
-export {mostrarComando,procesarComando,desglosarDimension};
+function desglosarPosicionInicial(posicionInicial){
+  const [x, y] = posicionInicial.slice(0, -1).split(',').map(Number);
+  const direccion = posicionInicial.slice(-1);
+  const desglosado = [x, y].concat(direccion);
+  return desglosado;
+}
+export {mostrarComando,procesarComando,desglosarDimension,desglosarPosicionInicial};
