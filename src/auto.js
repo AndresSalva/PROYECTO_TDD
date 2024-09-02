@@ -70,11 +70,5 @@ class auto {
         let resultado = this.posX + "," + this.posY + this.direccion;
         return resultado;
     }
-    limitesPosicionInicial(){
-        if(this.posX < 0 || this.posY < 0 ){
-            return "Posicion fuera de limites" 
-        }
-        return true;
-    }
 }
 export default auto;
