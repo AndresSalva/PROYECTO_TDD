@@ -8,4 +8,8 @@ function procesarComando(comando) {
   const [dimensionesSuperficie, posicionInicial, comandosMovimiento] = comando.split('/');
   return [dimensionesSuperficie,posicionInicial,comandosMovimiento];
 }
-export {mostrarComando,procesarComando};
+function desglosarDimension(dimensionesSuperficie){
+  const [filas, columnas] = dimensionesSuperficie.split(',').map(Number);
+  return [filas, columnas];
+}
+export {mostrarComando,procesarComando,desglosarDimension};
