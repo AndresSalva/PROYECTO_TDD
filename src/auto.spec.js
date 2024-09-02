@@ -95,4 +95,8 @@ describe("Verificar clase auto", () => {
       const autito = new auto(2,2,"O");
       expect(autito.Avanzar()).toEqual("1,2O");
     });
+    it("Si el autito está en una posición menor a las coordenadas permitidas de la matriz, debería dar un error", () => {
+      const autito = new auto(-1, 2, "O");
+      expect(autito.limitesPosicionInicial()).toEqual("Posicion fuera de limites");
+    });
   });

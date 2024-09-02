@@ -1,6 +1,6 @@
 class auto {
     constructor(posX, posY, direccion){
-        this.posX=posX;             //fila
+        this.posX=posX || 0;             //fila
         this.posY=posY;             //columnas
         this.direccion = direccion;
     }
@@ -70,6 +70,11 @@ class auto {
         let resultado = this.posX + "," + this.posY + this.direccion;
         return resultado;
     }
-
+    limitesPosicionInicial(){
+        if(this.posX < 0){
+            return "Posicion fuera de limites" 
+        }
+        return true;
+    }
 }
 export default auto;
