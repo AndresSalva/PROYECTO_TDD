@@ -1,4 +1,4 @@
-import {mostrarComando, procesarComando,desglosarDimension,desglosarPosicionInicial,desglosarMovimiento,ejecutar} from "./comando.js";
+import {mostrarComando, procesarComando,desglosarDimension,desglosarPosicionInicial,desglosarMovimiento,ejecutar,validarPosicionInicial} from "./comando.js";
 
 describe("Linea de comandos del auto", () => {
   it("Deberia mostrar el comando ingresado por el usuario", () => {
@@ -28,6 +28,10 @@ describe("Linea de comandos del auto", () => {
   it("Debería procesar el comando ingresado y devolver la posicion final del autito", () => {
     const result = ejecutar("5,5/3,3N/IADA")
     expect(result).toEqual("2,4N");
+  });
+  it("Debería devolver 'Error de comando' si en la posicion x es negativo", () => {
+    const posicionInicial = [-1, 3];
+    expect(validarPosicionInicial(posicionInicial)).toEqual("Error de comando");
   });
   
 });

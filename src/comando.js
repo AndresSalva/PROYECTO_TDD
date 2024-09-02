@@ -36,4 +36,13 @@ function ejecutar(comando){
   }
   return autito.mostrarPosicion();
 }
-export {mostrarComando,procesarComando,desglosarDimension,desglosarPosicionInicial,desglosarMovimiento,ejecutar};
+
+function validarPosicionInicial(posicionInicial) {
+  const [x, y] = posicionInicial;
+  if (x < 0 || y < 0) {
+      return "Error de comando";
+  }
+  return true;
+}
+
+export {mostrarComando,procesarComando,desglosarDimension,desglosarPosicionInicial,desglosarMovimiento,ejecutar,validarPosicionInicial};
