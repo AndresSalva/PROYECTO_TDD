@@ -48,4 +48,12 @@ describe("Linea de comandos del auto", () => {
     const autoFuera = new auto(6, 3, 'N');
     expect(validarPosicionFinal(autoFuera, superficie)).toBe(false);
   });
+  it("Debería devolver 'Error de comando' cuando el auto se mueve fuera de los límites", () => {
+    const result = ejecutar("5,5/3,3N/AAA");
+    expect(result).toEqual("Error de comando");
+  });
+  it("Debería devolver la posicion final cuando el auto se mueve dentro de los límites", () => {
+    const result = ejecutar("5,5/3,2N/AA");
+    expect(result).toEqual("3,4N");
+  });
 });
