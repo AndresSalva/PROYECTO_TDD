@@ -111,4 +111,10 @@ describe("Verificar clase auto", () => {
       const autito = new auto(2,2,"O");
       expect(autito.validarMovimiento("A")).toEqual(true);
     });
+    it("Se respalda el autito con una copia", () => {
+      const autito = new auto(2,2,"O");
+      const copia = new auto(3,3,"N");
+      autito.respaldarAutito(copia)
+      expect(autito.mostrarPosicion()).toEqual("3,3N");
+    });
   });
