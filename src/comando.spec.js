@@ -48,12 +48,20 @@ describe("Linea de comandos del auto", () => {
     const autoFuera = new auto(6, 3, 'N');
     expect(validarPosicionFinal(autoFuera, superficie)).toBe(false);
   });
-  it("Debería devolver 'Error de comando' cuando el auto se mueve fuera de los límites", () => {
-    const result = ejecutar("5,5/3,3N/AAA");
-    expect(result).toEqual("Error de comando");
-  });
   it("Debería devolver la posicion final cuando el auto se mueve dentro de los límites", () => {
     const result = ejecutar("5,5/3,2N/AA");
     expect(result).toEqual("3,4N");
   });
-});
+  it("El auto deberia no moverse si choca con uno de los limites", () => {
+    const result = ejecutar("5,5/3,2N/AAAAAA");
+    expect(result).toEqual("3,5N");
+   });
+  it("Debería devolver superficie invalida si la superficie dada es negativa", () => {
+    const result = ejecutar("-5,5/3,2N/AA");
+    expect(result).toEqual("Superficie invalida");
+   });
+  it("Si un movimiento de la secuencia de movimientos no es correcto deberia devolver que dicho movimiento no es valido", () => {
+    const result = ejecutar("5,5/3,2N/AAM");
+    expect(result).toEqual("M no es un movimiento valido");
+   });
+  });

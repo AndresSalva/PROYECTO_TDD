@@ -103,12 +103,12 @@ describe("Verificar clase auto", () => {
       const autito = new auto(2,2,"O");
       expect(autito.mostrarPosicion()).toEqual("2,2O");
     });
-    it("El comando que se puede ingresar es A/I/D, sino deberia mostrar error de comando", () => {
+    it("El comando que se puede ingresar es A/I/D, sino deberia dar false", () => {
       const autito = new auto(2,2,"O");
-      expect(autito.validarMovomientos("M")).toEqual("El movimiento no es valido");
+      expect(autito.validarMovimiento("M")).toEqual(false);
     });
     it("El comando que se puede ingresar es A/I/D, deberia mostrar true", () => {
       const autito = new auto(2,2,"O");
-      expect(autito.validarMovomientos("A")).toEqual(true);
+      expect(autito.validarMovimiento("A")).toEqual(true);
     });
   });

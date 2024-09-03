@@ -34,11 +34,25 @@ function ejecutar(comando){
   }
   const movimientos = desglosarMovimiento(partes[2]);
   const superficie = new Superficie(dimension[0],dimension[1]);
-  const autito = new auto(posicionInicial[0],posicionInicial[1],posicionInicial[2]);
-  for (const movimiento of movimientos) {
-    autito.Avanza_o_Gira(movimiento);
-    if (!validarPosicionFinal(autito, superficie)) {
-      return "Error de comando";
+  let autito = new auto(posicionInicial[0],posicionInicial[1],posicionInicial[2]);
+  let autitoRespaldo = new auto(posicionInicial[0],posicionInicial[1],posicionInicial[2]);
+  if (!superficie.validarSuperficie()){
+    return "Superficie invalida";
+  }
+  else{
+    for (const movimiento of movimientos) {
+      if(autito.validarMovimiento(movimiento)){
+        autito.Avanza_o_Gira(movimiento);
+        if(validarPosicionFinal(autito,superficie)){
+            autitoRespaldo.respaldarAutito(autito);
+        }
+        else{
+            autito.respaldarAutito(autitoRespaldo);
+        }
+      }
+      else{
+        return movimiento + " no es un movimiento valido";
+      }
     }
   }
   return autito.mostrarPosicion();

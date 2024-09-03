@@ -84,12 +84,20 @@ class auto {
             this.GirarIzquierda();
         }
     }
-    validarMovomientos(movimiento){
+    validarMovimiento(movimiento){
+        let esValido;
         if (movimiento !== "A" && movimiento !== "I" && movimiento !== "D") {
-            return "El movimiento no es valido";
+            esValido = false;
         }
-        this.Avanza_o_Gira(movimiento);
-        return true;
+        else{
+            esValido = true
+        }
+        return esValido;
     }
+    respaldarAutito(autito){
+        this.posX = autito.posX;
+        this.posY = autito.posY;
+        this.direccion = autito.direccion;
+    }
 }
 export default auto;
