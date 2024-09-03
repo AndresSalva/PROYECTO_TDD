@@ -1,4 +1,4 @@
-import {mostrarComando,ejecutar,desglosarPosicionInicial,procesarComando} from "./comando";
+import {ejecutar,procesarComando} from "./comando";
 
 const comando = document.querySelector("#comando");
 const form = document.querySelector("#comando-form");
