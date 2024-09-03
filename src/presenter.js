@@ -8,7 +8,8 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const resultado = comando.value
-  div.innerHTML = "<br> Comando realizado: " + mostrarComando(resultado) + "</br> Posicion final: " + ejecutar(resultado) +"</p>";
+  const posInicial = procesarComando(resultado);
+  div.innerHTML = "<p> Posicion inicial: "+ posInicial[1]+  "<br> Comando realizado: " + posInicial[2] + "</br> Posicion final: " + ejecutar(resultado) +"</p>";
   
 
 });
