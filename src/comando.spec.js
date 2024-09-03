@@ -1,4 +1,6 @@
-import {mostrarComando, procesarComando,desglosarDimension,desglosarPosicionInicial,desglosarMovimiento,ejecutar,validarPosicionInicial} from "./comando.js";
+import {mostrarComando, procesarComando,desglosarDimension,desglosarPosicionInicial,desglosarMovimiento,ejecutar,validarPosicionInicial,validarPosicionFinal} from "./comando.js";
+import auto from "./auto";
+import Superficie from "./superficie";
 
 describe("Linea de comandos del auto", () => {
   it("Deberia mostrar el comando ingresado por el usuario", () => {
@@ -41,4 +43,9 @@ describe("Linea de comandos del auto", () => {
     const result = ejecutar("5,5/-1,3N/IADA")
     expect(result).toEqual("Error de comando");
   });
+  it("Debería devolver false si la posición del auto está fuera de los límites de la superficie", () => {
+    const superficie = new Superficie(5, 5);
+    const autoFuera = new auto(6, 3, 'N');
+    expect(validarPosicionFinal(autoFuera, superficie)).toBe(false);
+  });
 });

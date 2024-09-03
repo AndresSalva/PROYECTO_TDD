@@ -37,6 +37,9 @@ function ejecutar(comando){
   const autito = new auto(posicionInicial[0],posicionInicial[1],posicionInicial[2]);
   for (const movimiento of movimientos) {
     autito.Avanza_o_Gira(movimiento);
+    if (!validarPosicionFinal(autito, superficie)) {
+      return "Error de comando";
+    }
   }
   return autito.mostrarPosicion();
 }
@@ -49,4 +52,11 @@ function validarPosicionInicial(posicionInicial) {
   return true;
 }
 
-export {mostrarComando,procesarComando,desglosarDimension,desglosarPosicionInicial,desglosarMovimiento,ejecutar,validarPosicionInicial};
+function validarPosicionFinal(auto, superficie) {
+  const [filas, columnas] = superficie.mostrarSuperficie();
+  const { posX, posY } = auto;
+  return posX >= 0 && posX <= columnas && posY >= 0 && posY <= filas;
+}
+
+
+export {mostrarComando,procesarComando,desglosarDimension,desglosarPosicionInicial,desglosarMovimiento,ejecutar,validarPosicionInicial,validarPosicionFinal};
