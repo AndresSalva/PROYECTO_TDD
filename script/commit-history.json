@@ -1,0 +1,40 @@
+[
+  {
+    "sha": "d7247705f9d883ca585e2570bda41a16e5d45ae1",
+    "author": "AndresSalva",
+    "commit": {
+      "date": "2024-09-03T14:16:40.000Z",
+      "message": "Mejorando legibilidad",
+      "url": "https://github.com/AndresSalva/PROYECTO_TDD/commit/d7247705f9d883ca585e2570bda41a16e5d45ae1"
+    },
+    "stats": {
+      "total": 2,
+      "additions": 1,
+      "deletions": 1,
+      "date": "2024-09-03"
+    },
+    "coverage": 100,
+    "test_count": 43,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "AndresSalva",
+    "commit": {
+      "date": "2026-05-07T17:33:33.000Z",
+      "message": "feat: add tddlab tracking scripts",
+      "url": "https://github.com/AndresSalva/PROYECTO_TDD/commit/HEAD"
+    },
+    "stats": {
+      "total": 499,
+      "additions": 496,
+      "deletions": 3,
+      "date": "2026-05-07"
+    },
+    "coverage": 100,
+    "test_count": 43,
+    "failed_tests": 0,
+    "conclusion": "success"
+  }
+]

@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "default": "index.html",
+  "type": "module",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
-    "test": "jest --watch",
+    "test": "node ./script/tddScript.js",
     "test-once": "jest --verbose --coverage",
     "cypress": "cypress open",
-    "cypress-run": "cypress run"
+    "cypress-run": "cypress run",
+    "postinstall": "git init && npx husky"
   },
   "author": "Israel Antezana R.",
   "license": "ISC",
@@ -17,7 +19,9 @@
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.4",
     "babel-jest": "^29.7.0",
+    "cross-spawn": "^7.0.3",
     "cypress": "^13.13.3",
+    "husky": "^9.1.6",
     "jest": "^29.7.0",
     "parcel": "^2.12.0"
   }
